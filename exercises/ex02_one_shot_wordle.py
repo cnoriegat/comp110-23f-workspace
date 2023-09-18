@@ -1,4 +1,4 @@
-"""EX02 - One-Shot Wordle"""
+"""EX02 - One-Shot Wordle - Loops!"""
 
 __author__ = "730621572"
 
@@ -14,7 +14,7 @@ result: str = ""
 
 # prompting for guess
 while len(word_guess) != len(secret_word):
-    word_guess = input(f"That was not {len(secret_word)} letters! Try again: " )
+    word_guess = input(f"That was not {len(secret_word)} letters! Try again: ")
 
 # emoji output (green, yellow, white)
 while idx < len(secret_word):
@@ -24,11 +24,11 @@ while idx < len(secret_word):
         chr_found: bool = False 
         alt_idx: int = 0
         while not chr_found and (alt_idx < len(secret_word)):
-          if word_guess[idx] == secret_word[alt_idx]:
-            chr_found = True
-          else:
-            alt_idx += 1
-        if chr_found == True:
+            if word_guess[idx] == secret_word[alt_idx]:
+                chr_found = True
+            else:
+                alt_idx += 1
+        if chr_found is True:
             result += yellow_box 
         else:
             result += white_box  
@@ -36,10 +36,7 @@ while idx < len(secret_word):
 print(result)
 
 # game ending - correct or incorrect answers
-if len(word_guess) == len(secret_word):
-    if word_guess == secret_word:
-        print("Woo! You got it!")
-        exit()
-    elif len(word_guess) == len(secret_word):
-        print("Not quite. Play again soon!")
-        exit()
+if word_guess == secret_word:
+    print("Woo! You got it!")
+elif len(word_guess) == len(secret_word):
+    print("Not quite. Play again soon!")
