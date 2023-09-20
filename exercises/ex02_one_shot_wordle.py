@@ -26,8 +26,7 @@ while idx < len(secret_word):
         while not chr_found and (alt_idx < len(secret_word)):
             if word_guess[idx] == secret_word[alt_idx]:
                 chr_found = True
-            else: # sacar else (?)
-                alt_idx += 1
+            alt_idx += 1
         if chr_found is True:
             result += yellow_box 
         else:
