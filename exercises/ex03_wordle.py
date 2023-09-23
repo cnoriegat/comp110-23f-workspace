@@ -46,7 +46,7 @@ def main() -> None:
     
     while num_turns <= len(secret_word) and not win:
         print(f"=== Turn {num_turns}/{len(secret_word)} ===")
-        word_guess: str = input(f"Enter a {len(secret_word)} character word: ")
+        word_guess: str = input_guess(len(secret_word))
         print(emojified(word_guess, secret_word))
         if secret_word == word_guess:
             print(f"You won in {num_turns}/{len(secret_word)} turns!")
