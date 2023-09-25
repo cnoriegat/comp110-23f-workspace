@@ -43,7 +43,6 @@ def main() -> None:
     secret_word: str = "codes"
     num_turns: int = 1
     win: bool = False
-    
     while num_turns <= len(secret_word) and not win:
         print(f"=== Turn {num_turns}/{len(secret_word)} ===")
         word_guess: str = input_guess(len(secret_word))
@@ -52,7 +51,6 @@ def main() -> None:
             print(f"You won in {num_turns}/{len(secret_word)} turns!")
             win = True
         num_turns += 1
-    
     if not win:
         print(f"X/{num_turns} - Sorry, try again tomorrow!")
 
