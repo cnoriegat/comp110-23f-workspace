@@ -3,7 +3,7 @@
 
 __author__ = "730621572"
 
-
+# defining character for checking if word contains character
 def contains_char(word_input: str, char: str) -> bool:
     """Check if word input contains character."""
     assert len(char) == 1
@@ -15,7 +15,7 @@ def contains_char(word_input: str, char: str) -> bool:
         idx += 1
     return result
 
-
+# defining function for codifying guess as emoji
 def emojified(guess: str, secret: str) -> str:
     """Print emoji string based on guess."""
     assert len(guess) == len(secret)
@@ -34,7 +34,7 @@ def emojified(guess: str, secret: str) -> str:
         idx += 1
     return result
 
-
+# defining function for inputting guess
 def input_guess(exp_len: int) -> str:
     """Prompt users until correct length."""
     word_guess: str = input(f"Enter a {exp_len} character word: ")
@@ -42,7 +42,7 @@ def input_guess(exp_len: int) -> str:
         word_guess = input(f"That wasn't {exp_len} chars! Try again: ")
     return word_guess
 
-
+# defining main function - joining building blocks
 def main() -> None:
     """The entrypoint of the program and main game loop."""
     secret_word: str = "codes"
@@ -60,6 +60,6 @@ def main() -> None:
     if not win:
         print(f"X/{max_turns} - Sorry, try again tomorrow!")
 
-
+# running program
 if __name__ == "__main__":
     main()
