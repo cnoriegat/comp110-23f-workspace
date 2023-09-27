@@ -21,8 +21,9 @@ while (guess != secret) and (num_tries < max_tries):
     print(f"Remaining tries: {max_tries - num_tries}")
     guess = int(input("Guess again: "))
     num_tries += 1
-# if you've reached this point, guess == secret
+# if you've reached this point, guess == secret OR you ran out of tries
 if guess == secret:
     print("You guessed correctly!")
 else:
     print("You lose :(")
+print(f"The number was {secret}")
