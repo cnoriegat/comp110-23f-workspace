@@ -5,8 +5,9 @@ __author__ = "730621572"
 
 
 def all(input: list[int], num: int) -> bool:
-    """Compare list to number."""
-    input: list[str] = list()
+    """Compare numbers in list to separate number."""
+    if not input:
+        return False
     idx: int = 0
     while idx < len(input):
         if input[idx] != num:
@@ -29,6 +30,7 @@ def max(input: list[int]) -> int:
 
 
 def is_equal(input1: list[int], input2: list[int]) -> bool:
+    """Compare if lists are identical."""
     idx: int = 0
     if len(input1) != len(input2):
         return False
