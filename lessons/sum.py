@@ -28,3 +28,8 @@ def f_range_sum(vals: list[float]) -> float:
     for elem in range(len(vals)):
         sum += vals[elem]
     return sum
+
+my_list = ["w", "x", "y", "z"]
+
+for idx in range(0, len(my_list)):
+    print(idx)
