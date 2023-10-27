@@ -1,4 +1,4 @@
-"""Test my zip function"""
+"""Test my zip function."""
 
 
 __author__ = "730621572"
@@ -17,6 +17,7 @@ def test_dif_len_lists() -> None:
     test_list1: str = ["Hello", "COMP", "110"]
     test_list2: int = [1, 2, 3, 4]
     assert zip(test_list1, test_list2) == {}
+
 
 def test_same_len_lists() -> None:
     """Use case testing - lists of same lengths should a dictionary with both lists."""
