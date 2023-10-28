@@ -29,7 +29,29 @@ def f_range_sum(vals: list[float]) -> float:
         sum += vals[elem]
     return sum
 
-my_list = ["w", "x", "y", "z"]
+def sum1(vals: list[float]) -> float:
+    """Using a while loop."""
+    i: int = 0
+    result: float = 0.0
+    while i < (len(vals)):
+        result += vals[i]
+        i += 1
+    return result
 
-for idx in range(0, len(my_list)):
-    print(idx)
+def sum2(vals: list[float]) -> float:
+    """Using a for...in loop."""
+    result: float = 0.0
+    for elem in vals:
+        result += elem
+    return result
+
+def sum3(vals: list[float]) -> float:
+    """Using for...range loop."""
+    result: float = 0.0
+    for idx in range(len(vals)):
+        result += vals[idx]
+    return result
+
+print(sum1([1.1, 0.9, 1.0]))
+print(sum2([1.1, 0.9, 1.0]))
+print(sum3([1.1, 0.9, 1.0]))

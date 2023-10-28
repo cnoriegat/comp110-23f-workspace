@@ -15,3 +15,5 @@ def zip(list1: list[str], list2: list[int]) -> dict[str, int]:
             value: int = list2[idx]
             result[key] = value
     return result
+
+print(zip(["Happy", "Tuesday"],[1,2]))
