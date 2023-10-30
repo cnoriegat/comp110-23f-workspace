@@ -51,8 +51,6 @@ def contains(haystack: list[int], needle: int) -> bool:
 
 print(contains([1, 4, 34, 58, 30, 45], 35))
 
-
-
 def contains1(needle: int, haystack: list[int]) -> bool:
     """Function to find needle in haystack."""
     for idx in range(len(haystack)):
