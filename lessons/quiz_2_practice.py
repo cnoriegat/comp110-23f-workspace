@@ -13,6 +13,8 @@ print("Constanza" in family)
 family[1] = "Gustavo mayor"
 family[5] = "Gustavo menor"
 print(family)
+family.pop(2)
+print(family)
     
 
 def mimic(my_words: str) -> str:
@@ -30,7 +32,9 @@ friends [3] = "Mel"
 friends[0] = "Mofla"
 friends[len(friends)-1] = "Mica"
 friends.append("Elena")
+print(friends)
 print(len(friends))
+friends.pop(0)
 print(friends)
 
 for idx in range(len(friends)-1):
@@ -59,3 +63,10 @@ def contains1(needle: int, haystack: list[int]) -> bool:
     return False
 
 print(contains1(3, [1, 2, 3]))
+
+my_list: list[int] = [1, 2, 3, 4]
+my_list[2] = 45
+print(my_list)
+print(len(my_list))
+my_list.pop(0)
+print(my_list)
