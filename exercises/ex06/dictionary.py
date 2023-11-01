@@ -17,9 +17,9 @@ def invert(input: dict[str, str]) -> dict[str, str]:
 
     return result
 
+
 def favorite_color(fav_color: dict[str, str]) -> str:
     """Returns the color that appears most frequently in a dictionary."""
-    
     color_count: dict[str, int] = {}
 
     for key in fav_color:
@@ -39,9 +39,9 @@ def favorite_color(fav_color: dict[str, str]) -> str:
     
     return pop_color
 
+
 def count(input: list[str]) -> dict[str, int]:
     """Counting the frequencies of each value in a list."""
-    
     result: dict[str, int] = {}
 
     for elem in input:
@@ -52,9 +52,9 @@ def count(input: list[str]) -> dict[str, int]:
     
     return result
 
+
 def alphabetizer(input: list[str]) -> dict[str, list[str]]:
     """Function that alphabetizes list."""
-
     alpha: dict[str, list[str]] = {}
     
     for elem in input:
@@ -69,9 +69,9 @@ def alphabetizer(input: list[str]) -> dict[str, list[str]]:
     
     return alpha
 
+
 def update_attendance(att: dict[str, list[str]], day: str, stu: str):
     """Dictionary updating student attendance during the week."""
-
     if day in att:
         att[day].append(stu)
     else:
