@@ -10,7 +10,7 @@ def invert(input: dict[str, str]) -> dict[str, str]:
 
     for key in input:
         if input[key] in result:
-            raise KeyError ("Duplicate keys are not accepted.")
+            raise KeyError("Duplicate keys are not accepted.")
         
         value: str = input[key]
         result[value] = key
@@ -70,7 +70,7 @@ def alphabetizer(input: list[str]) -> dict[str, list[str]]:
     return alpha
 
 
-def update_attendance(att: dict[str, list[str]], day: str, stu: str):
+def update_attendance(att: dict[str, list[str]], day: str, stu: str) -> dict[str, list[str]]:
     """Dictionary updating student attendance during the week."""
     if day in att:
         att[day].append(stu)
@@ -79,4 +79,3 @@ def update_attendance(att: dict[str, list[str]], day: str, stu: str):
         att[day] = new_list
     
     return att
-
