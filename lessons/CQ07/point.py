@@ -22,6 +22,5 @@ class Point:
     
     def scale(self, factor: int) -> Point: 
         """Method that belongs to the Point class and creates a new Point."""
-        self.x *= factor
-        self.y *= factor
+        new_point: Point = Point(self.x * factor, self.y * factor)
         return Point
