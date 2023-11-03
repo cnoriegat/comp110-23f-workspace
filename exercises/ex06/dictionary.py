@@ -69,7 +69,6 @@ def alphabetizer(input: list[str]) -> dict[str, list[str]]:
     
     return alpha
 
-
 def update_attendance(att: dict[str, list[str]], day: str, stu: str) -> dict[str, list[str]]:
     """Dictionary updating student attendance during the week."""
     if day in att:
