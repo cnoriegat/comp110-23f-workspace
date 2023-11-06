@@ -2,6 +2,7 @@
 
 
 from __future__ import annotations
+
 __author__ = "730621572"
 
 
@@ -23,4 +24,4 @@ class Point:
     def scale(self, factor: int) -> Point: 
         """Method that belongs to the Point class and creates a new Point."""
         new_point: Point = Point(self.x * factor, self.y * factor)
-        return Point
+        return new_point

@@ -5,11 +5,7 @@ __author__ = "730621572"
 
 
 # importing my dictionary functions
-from exercises.ex06.dictionary import invert
-from exercises.ex06.dictionary import favorite_color
-from exercises.ex06.dictionary import count
-from exercises.ex06.dictionary import alphabetizer
-from exercises.ex06.dictionary import update_attendance
+from exercises.ex06.dictionary import invert, favorite_color, count, alphabetizer, update_attendance
 
 
 # testing invert function
@@ -32,8 +28,8 @@ def test_long_dict() -> None:
 
 # testing favorite_color function
 def test_empty_color() -> None:
-     """Edge case testing - favorite_color({}) should return empty dictionary."""
-     assert favorite_color({}) == ""
+    """Edge case testing - favorite_color({}) should return empty dictionary."""
+    assert favorite_color({}) == ""
 
 
 def test_compound_colors() -> None:
@@ -43,15 +39,16 @@ def test_compound_colors() -> None:
 
 
 def test_tie() -> None:
-     """Use case testing - testing with tie."""
-     test_dict: str = {"Mia": "Light blue", "Lia": "Magenta", "Cate": "Navy Blue", "Nico": "Navy blue", "Gus": "Light blue"}
-     assert favorite_color(test_dict) == "Light blue"
+    """Use case testing - testing with tie."""
+    test_dict: str = {"Mia": "Light blue", "Lia": "Magenta", "Cate": "Navy Blue", "Nico": "Navy blue", "Gus": "Light blue"}
+    assert favorite_color(test_dict) == "Light blue"
 
 
 # testing count function
 def test_empty_count() -> None:
     """Edge case testing - count([]) should return empty dictionary."""
     assert count([]) == {}
+
 
 def test_repeat_value() -> None:
     """Use case testing - testing with same value."""
@@ -60,9 +57,9 @@ def test_repeat_value() -> None:
 
 
 def test_dif_values() -> None:
-     """Use case testing - testing with different values."""
-     test_list: str = ["Sea", "Ocean", "Lake", "Pool"]
-     assert count(test_list) == {"Sea": 1, "Ocean": 1, "Lake": 1, "Pool": 1}
+    """Use case testing - testing with different values."""
+    test_list: str = ["Sea", "Ocean", "Lake", "Pool"]
+    assert count(test_list) == {"Sea": 1, "Ocean": 1, "Lake": 1, "Pool": 1}
 
 
 # testing alphabetizer function
@@ -72,9 +69,9 @@ def test_empty_alpha() -> None:
 
 
 def test_capitalized() -> None:
-     """Use case testing - testing with capitalized values."""
-     test_list: list[str] = ["SEA", "OCEAN", "LAKE", "POOL", "SAND", "BEACH", "SEA"]
-     assert alphabetizer(test_list) == {"s": ['sea', 'sand', 'sea'], "o": ['ocean'], "l": ['lake'], "p": ['pool'], "b": ['beach']}
+    """Use case testing - testing with capitalized values."""
+    test_list: list[str] = ["SEA", "OCEAN", "LAKE", "POOL", "SAND", "BEACH", "SEA"]
+    assert alphabetizer(test_list) == {"s": ['sea', 'sand', 'sea'], "o": ['ocean'], "l": ['lake'], "p": ['pool'], "b": ['beach']}
 
 
 def test_case_2() -> None:
@@ -90,11 +87,12 @@ def test_empty_dict() -> None:
 
 
 def test_no_att() -> None:
-     """Use case testing - no attendance on Friday."""
-     test_dict: dict[str] = {"Monday": ["Harry"], "Tuesday": ["Ron"], "Wednesday": ["Hermionie"], "Thursday": ["Neville"]}
-     assert update_attendance(test_dict, "Friday", "") == {'Monday': ['Harry'], 'Tuesday': ['Ron'], 'Wednesday': ['Hermionie'], 'Thursday': ['Neville'], 'Friday': ['']}
+    """Use case testing - no attendance on Friday."""
+    test_dict: dict[str] = {"Monday": ["Harry"], "Tuesday": ["Ron"], "Wednesday": ["Hermionie"], "Thursday": ["Neville"]}
+    assert update_attendance(test_dict, "Friday", "") == {'Monday': ['Harry'], 'Tuesday': ['Ron'], 'Wednesday': ['Hermionie'], 'Thursday': ['Neville'], 'Friday': ['']}
+
 
 def test_case_1() -> None:
-     """Use case testing - no attendance on Monday."""
-     test_dict: dict[str] = {}
-     assert update_attendance(test_dict, "Tuesday", "Hermionie") == {'Tuesday': ['Hermionie']}
+    """Use case testing - no attendance on Monday."""
+    test_dict: dict[str] = {}
+    assert update_attendance(test_dict, "Tuesday", "Hermionie") == {'Tuesday': ['Hermionie']}

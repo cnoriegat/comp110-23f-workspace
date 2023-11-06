@@ -58,8 +58,8 @@ def alphabetizer(input: list[str]) -> dict[str, list[str]]:
     alpha: dict[str, list[str]] = {}
     
     for elem in input:
-        elem = elem.lower()
-        chr1: str = elem[0]
+        elem_check = elem.lower()
+        chr1: str = elem_check[0]
 
         if chr1 in alpha:
             alpha[chr1].append(elem)
@@ -69,10 +69,12 @@ def alphabetizer(input: list[str]) -> dict[str, list[str]]:
     
     return alpha
 
+
 def update_attendance(att: dict[str, list[str]], day: str, stu: str) -> dict[str, list[str]]:
     """Dictionary updating student attendance during the week."""
     if day in att:
-        att[day].append(stu)
+        if stu not in att[day]:
+            att[day].append(stu)
     else:
         new_list: list[str] = [stu]
         att[day] = new_list
