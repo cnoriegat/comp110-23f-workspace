@@ -2,7 +2,7 @@
 
 #it should always have _test.py at the end
 
-from lessons.sum_evens import sum_evens_of_list
+from  sum_evens import sum_evens_of_list
 
 def test_empty_list() -> None:
     """sum_evens_of_list([]) should return O"""
